@@ -1,11 +1,17 @@
-// import { Carousel } from "keep-react";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
 import "./Banner.css";
-// import { AuthContext } from "../Authentication/AuthProvider/Authprovider";
-import "./Banner.css";
+
+// Import your images from the assets folder
+import image1 from "../../../assets/slide/home.gif";
+import image2 from "../../../assets/slide/Skills.gif";
+import image3 from "../../../assets/slide/Experience.gif";
+import image4 from "../../../assets/slide/team-work.gif";
+import image5 from "../../../assets/slide/Contact.gif";
+import image6 from "../../../assets/slide/remote job.gif";
+
 const Banner = () => {
-  //   const { mode } = useContext(AuthContext);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const intervalRef = useRef(null);
 
   useEffect(() => {
     const slider = document.querySelector(".slider");
@@ -18,20 +24,19 @@ const Banner = () => {
 
     document.addEventListener("click", activate, false);
 
-    // Cleanup the event listener on component unmount
+    // Start auto clicking next button every 3 seconds
+    intervalRef.current = setInterval(() => {
+      nextSlide();
+    }, 3000); // Change interval duration to 3000 milliseconds for 3 seconds
+
+    // Cleanup the interval on component unmount
     return () => {
+      clearInterval(intervalRef.current);
       document.removeEventListener("click", activate, false);
     };
   }, []);
 
-  const items = [
-    "https://i.ibb.co/LhKZCk5/web-developer.gif",
-    // "https://i.ibb.co/Y0NGz8w/page-3.gif",
-    // "https://i.ibb.co/xqyHKcm/page-2.gif",
-    // "https://i.ibb.co/ZLnKXbm/user-of-pdf-most.gif",
-    // "https://i.ibb.co/MNYn3gF/5.png",
-    // "https://i.ibb.co/5hDPDpv/speech-document.png",
-  ];
+  const items = [image1, image2, image3, image4, image5, image6];
 
   const nextSlide = () => {
     setCurrentIndex((prevIndex) => (prevIndex + 1) % items.length);
@@ -51,28 +56,14 @@ const Banner = () => {
             key={index}
             className={` ${index === currentIndex ? "active" : ""} item`}
             style={{ backgroundImage: `url('${item}')` }}
-          >
-            <div className="content bg-transparent">
-              <button className="bg-[#F1E9D5]">Read More</button>
-            </div>
-          </li>
+          ></li>
         ))}
       </ul>
       <nav className="nav">
-        <button
-          className="btn prev"
-          //----------- name="arrow-back-outline"----------
-          onClick={prevSlide}
-        >
-          {/* --------- Corrected: Added ion-icon class ----------*/}
+        <button className="btn prev" onClick={prevSlide}>
           <ion-icon name="arrow-back-outline"></ion-icon>
         </button>
-        <button
-          className="btn next"
-          //--------- name="arrow-forward-outline"----------
-          onClick={nextSlide}
-        >
-          {/*---------- Corrected: Added ion-icon class -------------*/}
+        <button className="btn next" onClick={nextSlide}>
           <ion-icon name="arrow-forward-outline"></ion-icon>
         </button>
       </nav>

@@ -12,8 +12,10 @@
   "dependencies": {
     "@tanstack/react-query": "^5.17.0",
     "axios": "^1.6.3",
+    "clsx": "^2.1.0",
     "date-fns": "^3.0.6",
     "firebase": "^10.7.1",
+    "framer-motion": "^11.0.8",
     "keep-react": "^1.2.0",
     "localforage": "^1.10.0",
     "lottie-react": "^2.4.0",
@@ -26,7 +28,8 @@
     "react-icons": "^4.12.0",
     "react-router-dom": "^6.21.1",
     "react-spinners": "^0.13.8",
-    "sort-by": "^1.2.0"
+    "sort-by": "^1.2.0",
+    "tailwind-merge": "^2.2.1"
   },
   "devDependencies": {
     "@types/react": "^18.2.43",
