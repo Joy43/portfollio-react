@@ -113,7 +113,7 @@
   user-select: none;
 
   & .btn {
-    background-color: rgba(12, 27, 243, 0.5);
+    background-color: rgba(202, 49, 233, 0.5);
     color: rgba(0, 0, 0, 0.7);
     border: 2px solid rgba(0, 0, 0, 0.6);
     margin: 0 0.25rem;
@@ -131,7 +131,7 @@
     width: 100px;
     height: 180px;
     background-size: contain; /* Adjust background size for smaller devices */
-    background-repeat: no-repeat; /* Prevent repeating the background */
+    background-repeat: no-repeat; /*  Prevent repeating the background  */
     
     &:nth-child(3) {
       left: 50%;

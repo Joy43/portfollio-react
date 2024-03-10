@@ -7,7 +7,7 @@ const Navbar = () => {
         <Link to="">Home</Link>
       </li>
       <li>
-        <Link to="">About</Link>
+        <Link to="">About Us</Link>
       </li>
       <li>
         <Link to="">Task</Link>
@@ -52,7 +52,9 @@ const Navbar = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{Navlinks}</ul>
         </div>
-        <div className="navbar-end"></div>
+        <div className="navbar-end">
+          <div>download cv</div>
+        </div>
       </div>
     </div>
   );

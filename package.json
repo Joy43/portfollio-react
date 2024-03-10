@@ -29,7 +29,8 @@
     "react-router-dom": "^6.21.1",
     "react-spinners": "^0.13.8",
     "sort-by": "^1.2.0",
-    "tailwind-merge": "^2.2.1"
+    "tailwind-merge": "^2.2.1",
+    "typewriter-effect": "^2.21.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.43",
