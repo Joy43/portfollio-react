@@ -53,7 +53,7 @@ const Navbar = () => {
           <ul className="menu menu-horizontal px-1">{Navlinks}</ul>
         </div>
         <div className="navbar-end">
-          <div>download cv</div>
+          <div>Download Resume</div>
         </div>
       </div>
     </div>
