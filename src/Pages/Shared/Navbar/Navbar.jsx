@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import logo from "../../../assets/logo.png";
+import { Button } from "keep-react";
 const Navbar = () => {
   const Navlinks = (
     <>
@@ -7,10 +8,10 @@ const Navbar = () => {
         <Link to="">Home</Link>
       </li>
       <li>
-        <Link to="">About Us</Link>
+        <Link to="/aboutus">About Us</Link>
       </li>
       <li>
-        <Link to="">Task</Link>
+        <Link to="/portfollio">Portfollio</Link>
       </li>
       <li></li>
       <li></li>
@@ -53,7 +54,13 @@ const Navbar = () => {
           <ul className="menu menu-horizontal px-1">{Navlinks}</ul>
         </div>
         <div className="navbar-end">
-          <div>Download Resume</div>
+          <div>
+            <a href="">
+              <Button className="btn btn-active btn-ghost">
+                Download Resume
+              </Button>
+            </a>
+          </div>
         </div>
       </div>
     </div>

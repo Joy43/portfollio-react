@@ -3,20 +3,24 @@ import Typewriter from "typewriter-effect";
 import about from "../../../assets/slide/about us.gif";
 const Aboutus = () => {
   const accordionData = [
-    // {
-    //   title: "Profile",
-    //   subTitle: [1, 2, 3, 4],
-    //   svg: (
-    //     <svg
-    //       width={20}
-    //       fill="white"
-    //       viewBox="0 0 1920 1920"
-    //       xmlns="http://www.w3.org/2000/svg"
-    //     >
-    //       ...
-    //     </svg>
-    //   ),
-    // },
+    {
+      title: "programming",
+      subTitle: [
+        "web Application and app Design",
+        "Full stack web Development with",
+        "App interface/ Website into app",
+      ],
+      svg: (
+        <svg
+          width={20}
+          fill="white"
+          viewBox="0 0 1920 1920"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          ...
+        </svg>
+      ),
+    },
     {
       title: "Skills",
       subTitle: [
@@ -84,13 +88,14 @@ const Aboutus = () => {
 
   const handleToggle = (idx) => {
     if (accordionData[idx].title === "Education") {
-      setIsActive(idx); // Always keep "Education" section active
-      setSubTitle(accordionData[idx].subTitle); // Show sub-items of "Education"
+      setIsActive(idx);
+      setSubTitle(accordionData[idx].subTitle);
     } else {
       setIsActive((prevIdx) => (prevIdx === idx ? null : idx));
       if (
         accordionData[idx].title === "Skills" ||
-        accordionData[idx].title === "Experience"
+        accordionData[idx].title === "Experience" ||
+        accordionData[idx].title === "programming"
       ) {
         setSubTitle(accordionData[idx].subTitle);
       } else {
@@ -133,7 +138,7 @@ const Aboutus = () => {
                   {/* header / title  */}
                   <div
                     onClick={() => handleToggle(idx)}
-                    className="relative flex cursor-pointer items-center gap-6 bg-[#2e2c2c] p-5"
+                    className="relative flex cursor-pointer items-center gap-6  p-5"
                   >
                     {data?.svg}
                     <h5 className="text-white font-medium">{data?.title}</h5>
