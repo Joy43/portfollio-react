@@ -2,7 +2,7 @@ import { useEffect, useState, useRef } from "react";
 import "./Banner.css";
 
 // Import your images from the assets folder
-import image1 from "../../../assets/slide/home.gif";
+import image1 from "../../../assets/slide/profile ssjoy .gif";
 import image2 from "../../../assets/slide/Skills.gif";
 import image3 from "../../../assets/slide/Experience.gif";
 import image4 from "../../../assets/slide/team-work.gif";
@@ -24,12 +24,13 @@ const Banner = () => {
 
     document.addEventListener("click", activate, false);
 
-    // Start auto clicking next button every 3 seconds
+    // Start auto  3 seconds
     intervalRef.current = setInterval(() => {
       nextSlide();
-    }, 3000); // Change interval duration to 3000 milliseconds for 3 seconds
+    }, 3000);
 
-    // Cleanup the interval on component unmount
+    // Change interval duration to 3000 milliseconds for 3 seconds
+
     return () => {
       clearInterval(intervalRef.current);
       document.removeEventListener("click", activate, false);

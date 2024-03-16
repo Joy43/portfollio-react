@@ -130,7 +130,7 @@ const Aboutus = () => {
         {/* ----------type writing---------------- */}
         <Typewriter
           options={{
-            strings: ["About", "Us", "Shahsultan Islam Joy"],
+            strings: ["ABOUT", "US", "SHAHSULTAN ISLAM JOY"],
             autoStart: true,
             loop: true,
           }}

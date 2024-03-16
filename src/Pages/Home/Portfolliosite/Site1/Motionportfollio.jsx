@@ -35,7 +35,7 @@ const Motionportfolli = () => {
         {/* --------card -1 -world teachnoloy-- */}
         <motion.div
           layout
-          transition={{ layout: { duration: 1, type: "spring" } }}
+          transition={{ layout: { duration: 1, type: spring } }}
           onClick={() => setIsOpen(!isOpen)}
           className=" mx-auto my-6 max-w-[350px] rounded-lg border font-sans shadow-2xl"
         >
@@ -62,7 +62,7 @@ const Motionportfolli = () => {
                       height={200}
                       className="h-[150px] w-full bg-black/40"
                       src={techcover}
-                      alt="card navigate ui"
+                      alt=""
                     />
                   </div>
                   <div className="flex gap-1 shadow-lg overflow-hidden">
@@ -71,14 +71,14 @@ const Motionportfolli = () => {
                       height={201}
                       className="h-[150px] w-[49.5%] bg-black/40"
                       src={techright}
-                      alt="card navigate ui"
+                      alt=""
                     />
                     <img
                       width={202}
                       height={202}
                       className="h-[150px] w-[49.5%]  bg-black/40"
                       src={tecgleft}
-                      alt="card navigate ui"
+                      alt=""
                     />
                   </div>
                 </div>
@@ -146,7 +146,7 @@ const Motionportfolli = () => {
                       height={200}
                       className="h-[150px] w-full bg-black/40"
                       src={hotelCover}
-                      alt="card navigate ui"
+                      alt=""
                     />
                   </div>
                   <div className="flex gap-1 shadow-lg overflow-hidden">
@@ -155,14 +155,14 @@ const Motionportfolli = () => {
                       height={201}
                       className="h-[150px] w-[49.5%] bg-black/40"
                       src={hotelLeft}
-                      alt="card navigate ui"
+                      alt=""
                     />
                     <img
                       width={202}
                       height={202}
                       className="h-[150px] w-[49.5%]  bg-black/40"
                       src={hotelRight}
-                      alt="card navigate ui"
+                      alt=""
                     />
                   </div>
                 </div>
@@ -233,7 +233,7 @@ const Motionportfolli = () => {
                       height={200}
                       className="h-[150px] w-full bg-black/40"
                       src={convertcover}
-                      alt="card navigate ui"
+                      alt=""
                     />
                   </div>
                   <div className="flex gap-1 shadow-lg overflow-hidden">
@@ -242,14 +242,14 @@ const Motionportfolli = () => {
                       height={201}
                       className="h-[150px] w-[49.5%] bg-black/40"
                       src={convetright}
-                      alt="card navigate ui"
+                      alt=""
                     />
                     <img
                       width={202}
                       height={202}
                       className="h-[150px] w-[49.5%]  bg-black/40"
                       src={convertleft}
-                      alt="card navigate ui"
+                      alt=""
                     />
                   </div>
                 </div>
@@ -326,14 +326,14 @@ const Motionportfolli = () => {
                       height={201}
                       className="h-[150px] w-[49.5%] bg-black/40"
                       src={techright}
-                      alt="card navigate ui"
+                      alt=""
                     />
                     <img
                       width={202}
                       height={202}
                       className="h-[150px] w-[49.5%]  bg-black/40"
                       src={tecgleft}
-                      alt="card navigate ui"
+                      alt=""
                     />
                   </div>
                 </div>
