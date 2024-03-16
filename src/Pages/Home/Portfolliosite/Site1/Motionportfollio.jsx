@@ -8,6 +8,15 @@ import Typewriter from "typewriter-effect";
 import techcover from "../../../../assets/portfollio/texchworld/tecg-cover.png";
 import tecgleft from "../../../../assets/portfollio/texchworld/rtech-left.png";
 import techright from "../../../../assets/portfollio/texchworld/right.png";
+// -------our convert----------
+import convertcover from "../../../../assets/portfollio/texchworld/convert -cover.png";
+import convertleft from "../../../../assets/portfollio/texchworld/convertleft.png";
+import convetright from "../../../../assets/portfollio/texchworld/convet--right.png";
+
+// -----hotel world-------
+import hotelCover from "../../../../assets/portfollio/texchworld/hotel-cover.png";
+import hotelRight from "../../../../assets/portfollio/texchworld/hotel-left.png";
+import hotelLeft from "../../../../assets/portfollio/texchworld/hotel-right.png";
 const Motionportfolli = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
@@ -107,7 +116,7 @@ const Motionportfolli = () => {
             </AnimatePresence>
           )}
         </motion.div>
-        {/* ------card-2--- */}
+        {/* ------card-2 hotel--- */}
         <motion.div
           layout
           transition={{ layout: { duration: 1, type: "spring" } }}
@@ -136,7 +145,7 @@ const Motionportfolli = () => {
                       width={400}
                       height={200}
                       className="h-[150px] w-full bg-black/40"
-                      src={techcover}
+                      src={hotelCover}
                       alt="card navigate ui"
                     />
                   </div>
@@ -145,14 +154,14 @@ const Motionportfolli = () => {
                       width={201}
                       height={201}
                       className="h-[150px] w-[49.5%] bg-black/40"
-                      src={techright}
+                      src={hotelLeft}
                       alt="card navigate ui"
                     />
                     <img
                       width={202}
                       height={202}
                       className="h-[150px] w-[49.5%]  bg-black/40"
-                      src={tecgleft}
+                      src={hotelRight}
                       alt="card navigate ui"
                     />
                   </div>
@@ -198,7 +207,7 @@ const Motionportfolli = () => {
           onClick={() => setIsOpen(!isOpen)}
           className=" mx-auto my-6 max-w-[350px] rounded-lg border font-sans shadow-2xl"
         >
-          {/* HEDING ICON DIV */}
+          {/*--------- HEDING ICON DIV */}
           <motion.div
             layout="position"
             className="rounded-lg border w-full inline-flex font-sans  p-4 text-center shadow-2xl "
@@ -223,7 +232,7 @@ const Motionportfolli = () => {
                       width={400}
                       height={200}
                       className="h-[150px] w-full bg-black/40"
-                      src={convert}
+                      src={convertcover}
                       alt="card navigate ui"
                     />
                   </div>
@@ -232,14 +241,14 @@ const Motionportfolli = () => {
                       width={201}
                       height={201}
                       className="h-[150px] w-[49.5%] bg-black/40"
-                      src={techright}
+                      src={convetright}
                       alt="card navigate ui"
                     />
                     <img
                       width={202}
                       height={202}
                       className="h-[150px] w-[49.5%]  bg-black/40"
-                      src={tecgleft}
+                      src={convertleft}
                       alt="card navigate ui"
                     />
                   </div>
@@ -308,7 +317,7 @@ const Motionportfolli = () => {
                       height={200}
                       className="h-[150px] w-full bg-black/40"
                       src={techcover}
-                      alt="card navigate ui"
+                      alt="tech cover"
                     />
                   </div>
                   <div className="flex gap-1 shadow-lg overflow-hidden">

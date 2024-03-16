@@ -3,11 +3,11 @@ const Footer = () => {
   return (
     <div>
       <footer className="footer p-10 bg-neutral text-neutral-content">
-        <aside>
+        <aside className="shadow-lg">
           <img src={logo} className="w-24" alt="logo" />
           <p>
             shahsultan islam joy
-            <hr className="border-spacing-1" />
+            <hr className="border-spacing-1 bg-red-400" />
             <br />
             <hr className="border-spacing-1" />
             ssjoy43@gmail.com

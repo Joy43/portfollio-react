@@ -4,11 +4,11 @@ import about from "../../../assets/slide/about us.gif";
 const Aboutus = () => {
   const accordionData = [
     {
-      title: "programming",
+      title: "Programming Skill",
       subTitle: [
-        "web Application and app Design",
-        "Full stack web Development with",
-        "App interface/ Website into app",
+        "expert:-React,html5,css3,json web token,shopify",
+        "Comfortable:- React router,Next js,Bootstrap,rechart,React query ,nodejs",
+        "Fontend:- Tailwind css, daisy ui, matarial ui,React Flowbit, keep react",
       ],
       svg: (
         <svg
@@ -60,6 +60,7 @@ const Aboutus = () => {
         </svg>
       ),
     },
+
     {
       title: "Education",
       subTitle: [
@@ -80,6 +81,24 @@ const Aboutus = () => {
         </svg>
       ),
     },
+    {
+      title: "Language",
+      subTitle: [
+        "Bangla:-(Native)",
+        "English:-(Communication)",
+        "Hindi:-(Limited working proficiency) ",
+      ],
+      svg: (
+        <svg
+          width={20}
+          fill="white"
+          viewBox="0 0 1920 1920"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          ...
+        </svg>
+      ),
+    },
   ];
 
   // Toggle State and Function
@@ -95,7 +114,8 @@ const Aboutus = () => {
       if (
         accordionData[idx].title === "Skills" ||
         accordionData[idx].title === "Experience" ||
-        accordionData[idx].title === "programming"
+        accordionData[idx].title === "Language" ||
+        accordionData[idx].title === "Programming Skill"
       ) {
         setSubTitle(accordionData[idx].subTitle);
       } else {
@@ -124,7 +144,7 @@ const Aboutus = () => {
             <img src={about} alt="" />
           </div>
           <div className="card shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
-            {/* ------ all tabs--- */}
+            {/* ------  all tabs ------------ */}
 
             <div
               className={`max-w-[400px] my-10 overflow-hidden border-x ${
@@ -141,7 +161,7 @@ const Aboutus = () => {
                     className="relative flex cursor-pointer items-center gap-6  p-5"
                   >
                     {data?.svg}
-                    <h5 className="text-white font-medium">{data?.title}</h5>
+                    <h5 className=" font-medium">{data?.title}</h5>
                     <span className="w-0 h-0 border-b-[15px] border-b-[#03BF70] border-r-[15px] border-r-transparent absolute -bottom-[7px] left-10 -rotate-45"></span>
                   </div>
                   {/* body / content  */}
@@ -153,12 +173,12 @@ const Aboutus = () => {
                     }`}
                   >
                     <div className="overflow-hidden">
-                      {/* Render subtitle if it's the section that was clicked */}
+                      {/* ------- subtitle if it's the section that was clicked --------*/}
                       {subTitle &&
                         subTitle.map((subData, irx) => (
                           <div
                             key={irx}
-                            className="w-full text-gray-400 py-4 pl-16 pr-4 transition-all duration-500 hover:text-black hover:bg-green-100 border-l-4 border-white hover:border-[#03BF70]"
+                            className="w-full  py-4 pl-16 pr-4 transition-all duration-500 hover:text-black hover:bg-green-100 border-l-4 border-white hover:border-[#03BF70]"
                           >
                             {irx + 1}. {subData}
                           </div>

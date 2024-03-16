@@ -1,7 +1,25 @@
 import { Link } from "react-router-dom";
 import logo from "../../../assets/logo.png";
 import { Button } from "keep-react";
+import { useState } from "react";
+import { MdDarkMode } from "react-icons/md";
+import { BsSunFill } from "react-icons/bs";
 const Navbar = () => {
+  // -----------------     dark mode    ---------------
+
+  const [isDarkMode, setDarkMode] = useState(false);
+  const toogleTheame = () => {
+    const htmlElement = document.documentElement;
+    const currentTheme = htmlElement.getAttribute("data-theme");
+    setDarkMode((prevDarMode) => !prevDarMode);
+    if (currentTheme === "synthwave") {
+      htmlElement.setAttribute("data-theme", "corporate");
+    } else {
+      htmlElement.setAttribute("data-theme", "synthwave");
+    }
+  };
+  const themeIconSize = "30px";
+
   const Navlinks = (
     <>
       <li>
@@ -53,9 +71,23 @@ const Navbar = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{Navlinks}</ul>
         </div>
-        <div className="navbar-end">
+        <div className="navbar-end gap-4">
+          {/* -------theme --------------*/}
           <div>
-            <a href="">
+            <button
+              className="text-[#FF3811] btn btn-active btn-ghost "
+              onClick={toogleTheame}
+            >
+              {isDarkMode ? (
+                <MdDarkMode size={themeIconSize} />
+              ) : (
+                <BsSunFill size={themeIconSize} />
+              )}
+            </button>
+          </div>
+          {/* ----------download resume----------- */}
+          <div>
+            <a href={logo} download>
               <Button className="btn btn-active btn-ghost">
                 Download Resume
               </Button>
