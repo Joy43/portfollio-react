@@ -1,10 +1,81 @@
+import { useState } from "react";
+import Swal from "sweetalert2";
+
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+
+  // Function to handle input changes
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  // Function to handle form submission
+  const handleSubmit = async () => {
+    try {
+      // Send form data to backend
+      const response = await fetch(
+        "https://portfollio-server-seven.vercel.app/submit-form",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
+
+      if (response.ok) {
+        // Form submitted successfully, reset form fields
+        setFormData({
+          name: "",
+          email: "",
+          subject: "",
+          message: "",
+        });
+        const Toast = Swal.mixin({
+          toast: true,
+          position: "center",
+          showConfirmButton: false,
+          timer: 3000,
+          timerProgressBar: true,
+          didOpen: (toast) => {
+            toast.onmouseenter = Swal.stopTimer;
+            toast.onmouseleave = Swal.resumeTimer;
+          },
+        });
+        Toast.fire({
+          icon: "success",
+          title: "summited in successfully",
+          footer: " plese check your mail .Deatils here",
+        });
+      } else {
+        // Handle error
+
+        Swal.fire({
+          icon: "error",
+          title: "Oops...",
+          text: "Error submitting form",
+          footer: " do I have this issue?",
+        });
+      }
+    } catch (error) {
+      console.error("Error:", error);
+      alert("Again Click send Email Buton");
+    }
+  };
   return (
     <div>
-      <div className="grid sm:grid-cols-2 items-center gap-16 p-8 mx-auto max-w-4xl bg-white shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)] rounded-md text-[#333] font-[sans-serif]">
-        <div>
+      <div className="grid sm:grid-cols-2 items-center gap-16 p-8 mx-auto max-w-4xl  shadow-[0_2px_10px_-3px_rgba(6,81,237,0.3)] rounded-md  font-[sans-serif]">
+        {/* ----------talk us------------ */}
+        <div className="shadow-xl p-3">
           <h1 className="text-3xl font-extrabold">Let's Talk</h1>
-          <p className="text-sm text-gray-400 mt-3">
+          <p className="text-sm ">
             Have some big idea or brand to develop and need help? Then reach out
             we'd love to hear about your project and provide help.
           </p>
@@ -12,7 +83,7 @@ const Contact = () => {
             <h2 className="text-lg font-extrabold">Email</h2>
             <ul className="mt-3">
               <li className="flex items-center">
-                <div className="bg-[#e6e6e6cf] h-10 w-10 rounded-full flex items-center justify-center shrink-0">
+                <div className=" h-10 w-10 rounded-full flex items-center justify-center shrink-0">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="20px"
@@ -32,7 +103,7 @@ const Contact = () => {
                   className="text-[#007bff] text-sm ml-3"
                 >
                   <small className="block">Mail</small>
-                  <strong>https://gmail.com</strong>
+                  <strong>ssjoy43@gmail.com</strong>
                 </a>
               </li>
             </ul>
@@ -40,7 +111,7 @@ const Contact = () => {
           <div className="mt-12">
             <h2 className="text-lg font-extrabold">Socials</h2>
             <ul className="flex mt-3 space-x-4">
-              <li className="bg-[#e6e6e6cf] h-10 w-10 rounded-full flex items-center justify-center shrink-0">
+              <li className="bg-[#1e0f13cf] h-10 w-10 rounded-full flex items-center justify-center shrink-0">
                 <a href="javascript:void(0)">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -56,7 +127,7 @@ const Contact = () => {
                   </svg>
                 </a>
               </li>
-              <li className="bg-[#e6e6e6cf] h-10 w-10 rounded-full flex items-center justify-center shrink-0">
+              <li className="bg-[#1e0f13cf] h-10 w-10 rounded-full flex items-center justify-center shrink-0">
                 <a href="javascript:void(0)">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -72,7 +143,7 @@ const Contact = () => {
                   </svg>
                 </a>
               </li>
-              <li className="bg-[#e6e6e6cf] h-10 w-10 rounded-full flex items-center justify-center shrink-0">
+              <li className="bg-[#1e0f13cf] h-10 w-10 rounded-full flex items-center justify-center shrink-0">
                 <a href="javascript:void(0)">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -88,33 +159,47 @@ const Contact = () => {
             </ul>
           </div>
         </div>
-        <form className="ml-auo space-y-4">
+
+        {/* ------------form---------- */}
+        <form className="ml-auo shadow-2xl p-3 space-y-4">
           <input
             type="text"
+            name="name"
             placeholder="Name"
+            value={formData.name}
+            onChange={handleInputChange}
             className="w-full rounded-md py-2.5 px-4 border text-sm outline-[#007bff]"
           />
           <input
             type="email"
+            name="email"
             placeholder="Email"
+            value={formData.email}
+            onChange={handleInputChange}
             className="w-full rounded-md py-2.5 px-4 border text-sm outline-[#007bff]"
           />
           <input
             type="text"
+            name="subject"
             placeholder="Subject"
+            value={formData.subject}
+            onChange={handleInputChange}
             className="w-full rounded-md py-2.5 px-4 border text-sm outline-[#007bff]"
           />
           <textarea
+            name="message"
             placeholder="Message"
             rows={6}
+            value={formData.message}
+            onChange={handleInputChange}
             className="w-full rounded-md px-4 border text-sm pt-2.5 outline-[#007bff]"
-            defaultValue={""}
           />
           <button
             type="button"
-            className="text-white bg-[#007bff] hover:bg-blue-600 font-semibold rounded-md text-sm px-4 py-2.5 w-full"
+            onClick={handleSubmit}
+            className="bg-[#007bff] hover:bg-blue-600 font-semibold rounded-md text-sm px-4 py-2.5 w-full"
           >
-            Send
+            Send Email
           </button>
         </form>
       </div>

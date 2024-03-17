@@ -2,6 +2,7 @@ import { AnimatePresence, motion, spring } from "framer-motion";
 import tech from "../../../../assets/icon/tech.png";
 import hotel from "../../../../assets/icon/logo.png";
 import convert from "../../../../assets/icon/ourconvert.png";
+import scanner from "../../../../assets/icon/scannerpre.png";
 import { useState } from "react";
 import Typewriter from "typewriter-effect";
 // ---tech world----
@@ -17,6 +18,10 @@ import convetright from "../../../../assets/portfollio/texchworld/convet--right.
 import hotelCover from "../../../../assets/portfollio/texchworld/hotel-cover.png";
 import hotelRight from "../../../../assets/portfollio/texchworld/hotel-left.png";
 import hotelLeft from "../../../../assets/portfollio/texchworld/hotel-right.png";
+// --------scanner app-----------
+import scannerCover from "../../../../assets/portfollio/scanner/work-1.png";
+import scannerleft from "../../../../assets/portfollio/scanner/work-2.png";
+import scannerright from "../../../../assets/portfollio/scanner/work-3.png";
 const Motionportfolli = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
@@ -116,7 +121,7 @@ const Motionportfolli = () => {
             </AnimatePresence>
           )}
         </motion.div>
-        {/* ------card-2 hotel--- */}
+        {/* ------card-2 hotel ------------- */}
         <motion.div
           layout
           transition={{ layout: { duration: 1, type: "spring" } }}
@@ -299,8 +304,8 @@ const Motionportfolli = () => {
             layout="position"
             className="rounded-lg border w-full inline-flex font-sans  p-4 text-center shadow-2xl "
           >
-            <img src={tech} className=" rounded-lg h-20" alt="" />
-            <span className="text-4xl text-red-400"> World Teachnoloy</span>
+            <img src={scanner} className=" rounded-lg h-20" alt="" />
+            <span className="text-4xl text-red-400"> Scanner premium app</span>
           </motion.div>
           {isOpen && (
             <AnimatePresence>
@@ -316,7 +321,7 @@ const Motionportfolli = () => {
                       width={400}
                       height={200}
                       className="h-[150px] w-full bg-black/40"
-                      src={techcover}
+                      src={scannerCover}
                       alt="tech cover"
                     />
                   </div>
@@ -325,14 +330,14 @@ const Motionportfolli = () => {
                       width={201}
                       height={201}
                       className="h-[150px] w-[49.5%] bg-black/40"
-                      src={techright}
+                      src={scannerleft}
                       alt=""
                     />
                     <img
                       width={202}
                       height={202}
                       className="h-[150px] w-[49.5%]  bg-black/40"
-                      src={tecgleft}
+                      src={scannerright}
                       alt=""
                     />
                   </div>
@@ -341,17 +346,16 @@ const Motionportfolli = () => {
                 <div className="p mt-3 space-y-2 px-4">
                   <h2 className=" text-xl font-semibold">
                     {" "}
-                    A company that produces electronics components.
+                    Scanner Premium Plus Android app
                   </h2>
                   <h2 className=" text-sm">
-                    Multiple role-based sites where individuals can log in as
-                    typical clients and a few particular individuals can log in
-                    as admins.
+                    Scanner Premium Plus Android app in Amazon app storea few
+                    particular individuals can log in as admins.
                   </h2>
                 </div>
                 {/* -------visit button -----------*/}
                 <div className="text-center m-6">
-                  <a href="https://bespoke-pothos-a257c1.netlify.app/">
+                  <a href="https://www.amazon.com/codingx-Scanner-Premium-Plus/dp/B0BVXQXPQF/ref=sr_1_2?crid=2BL15ZLHX18P9&keywords=Scanner+Premium+Plus&qid=1702374500&sprefix=scanner+premium+plus%2Caps%2C336&sr=8-2https://www.amazon.com/codingx-Scanner-Premium-Plus/dp/B0BVXQXPQF/ref=sr_1_2?crid=2BL15ZLHX18P9&keywords=Scanner+Premium+Plus&qid=1702374500&sprefix=scanner+premium+plus%2Caps%2C336&sr=8-2">
                     <button className="btn btn-active btn-secondary">
                       <a href="https://example.com">
                         <svg

@@ -4,6 +4,7 @@ import Mainlayout from "../Layout/Mainlayout";
 import Home from "../Pages/Home/Home/Home";
 import Aboutus from "../Pages/Home/Aboutus/AboutUs";
 import Motionportfolli from "../Pages/Home/Portfolliosite/Site1/Motionportfollio";
+import Contact from "../Pages/Contact/Contact";
 
 export const router = createBrowserRouter([
   {
@@ -22,6 +23,10 @@ export const router = createBrowserRouter([
       {
         path: "/portfollio",
         element: <Motionportfolli></Motionportfolli>,
+      },
+      {
+        path: "/contact",
+        element: <Contact></Contact>,
       },
     ],
   },
