@@ -161,7 +161,7 @@ const Contact = () => {
         </div>
 
         {/* ------------form---------- */}
-        <form className="ml-auo shadow-2xl p-3 space-y-4">
+        <form className="ml-auto shadow-2xl p-3 space-y-4">
           <input
             type="text"
             name="name"

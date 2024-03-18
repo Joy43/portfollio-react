@@ -5,6 +5,8 @@ import Home from "../Pages/Home/Home/Home";
 import Aboutus from "../Pages/Home/Aboutus/AboutUs";
 import Motionportfolli from "../Pages/Home/Portfolliosite/Site1/Motionportfollio";
 import Contact from "../Pages/Contact/Contact";
+import DashBoadSidebar from "../Pages/Dashboad/Dashboad/DashBoadSidebar";
+import ContactInfo from "../Pages/Dashboad/Contactinfo/ContactInfo";
 
 export const router = createBrowserRouter([
   {
@@ -27,6 +29,15 @@ export const router = createBrowserRouter([
       {
         path: "/contact",
         element: <Contact></Contact>,
+      },
+      // ---------dashboad router-------
+      {
+        path: "/dashboad",
+        element: <DashBoadSidebar></DashBoadSidebar>,
+      },
+      {
+        path: "/contactinfo",
+        element: <ContactInfo></ContactInfo>,
       },
     ],
   },

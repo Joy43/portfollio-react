@@ -12,10 +12,10 @@ const Navbar = () => {
     const htmlElement = document.documentElement;
     const currentTheme = htmlElement.getAttribute("data-theme");
     setDarkMode((prevDarMode) => !prevDarMode);
-    if (currentTheme === "synthwave") {
+    if (currentTheme === "night") {
       htmlElement.setAttribute("data-theme", "corporate");
     } else {
-      htmlElement.setAttribute("data-theme", "synthwave");
+      htmlElement.setAttribute("data-theme", "night");
     }
   };
   const themeIconSize = "30px";
@@ -25,9 +25,7 @@ const Navbar = () => {
       <li>
         <Link to="">Home</Link>
       </li>
-      <li>
-        <Link to="/aboutus">About Us</Link>
-      </li>
+
       <li>
         <Link to="/portfollio">Portfollio</Link>
       </li>
@@ -39,7 +37,7 @@ const Navbar = () => {
   );
   return (
     <div>
-      <div className="navbar bg-base-100">
+      <div className="navbar bg-base-300 shadow-2xl border-cyan-200 mb-4">
         <div className="navbar-start">
           <div className="dropdown">
             <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
@@ -60,7 +58,7 @@ const Navbar = () => {
             </div>
             <ul
               tabIndex={0}
-              className="text-3xl menu  menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+              className="text-3xl  menu  menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
             >
               {Navlinks}
             </ul>
@@ -71,9 +69,18 @@ const Navbar = () => {
           </a>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1">{Navlinks}</ul>
+          <ul className="menu menu-horizontal px-1 ">{Navlinks}</ul>
         </div>
         <div className="navbar-end gap-4">
+          {/* -------dashboad----------- */}
+          <Link to="/dashboad">
+            {" "}
+            <button className="btn">
+              Dashboad
+              <div className="badge badge-secondary">+01</div>
+            </button>
+          </Link>
+
           {/* -------theme --------------*/}
           <div>
             <button
@@ -90,7 +97,7 @@ const Navbar = () => {
           {/* ----------download resume----------- */}
           <div>
             <a href={logo} download>
-              <Button className="btn btn-active btn-ghost">
+              <Button className="btn btn-active btn-secondary">
                 Download Resume
               </Button>
             </a>
