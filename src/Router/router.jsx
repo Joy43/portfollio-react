@@ -7,6 +7,7 @@ import Motionportfolli from "../Pages/Home/Portfolliosite/Site1/Motionportfollio
 import Contact from "../Pages/Contact/Contact";
 import DashBoadSidebar from "../Pages/Dashboad/Dashboad/DashBoadSidebar";
 import ContactInfo from "../Pages/Dashboad/Contactinfo/ContactInfo";
+import UserInfo from "../Pages/Dashboad/UserInfo/UserInfo";
 
 export const router = createBrowserRouter([
   {
@@ -38,6 +39,10 @@ export const router = createBrowserRouter([
       {
         path: "/contactinfo",
         element: <ContactInfo></ContactInfo>,
+      },
+      {
+        path: "userInfo",
+        element: <UserInfo></UserInfo>,
       },
     ],
   },

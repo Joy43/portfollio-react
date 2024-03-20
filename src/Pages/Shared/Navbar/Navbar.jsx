@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import logo from "../../../assets/logo.png";
+import CV from "../../../assets/portfollio/CV/shahsultan inslam JOY.png";
+
 import { Button } from "keep-react";
 import { useState } from "react";
 import { MdDarkMode } from "react-icons/md";
@@ -96,7 +98,7 @@ const Navbar = () => {
           </div>
           {/* ----------download resume----------- */}
           <div>
-            <a href={logo} download>
+            <a href={CV} download>
               <Button className="btn btn-active btn-secondary">
                 Download Resume
               </Button>

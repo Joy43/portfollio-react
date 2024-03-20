@@ -1,4 +1,5 @@
 import Contact from "../../Contact/Contact";
+import Feedback from "../../Feedback/Feedback";
 import Aboutus from "../Aboutus/AboutUs";
 import Banner from "../Banner/Banner";
 import Motionportfolli from "../Portfolliosite/Site1/Motionportfollio";
@@ -17,6 +18,9 @@ const Home = () => {
       </div>
       <div>
         <Contact></Contact>
+      </div>
+      <div>
+        <Feedback></Feedback>
       </div>
     </div>
   );
