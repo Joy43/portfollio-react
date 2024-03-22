@@ -75,10 +75,10 @@ const Navbar = () => {
         </div>
         <div className="navbar-end gap-4">
           {/* -------dashboad----------- */}
-          <Link to="/dashboad">
+          <Link to="/ContactInfo">
             {" "}
             <button className="btn">
-              Dashboad
+              Contact-Info
               <div className="badge badge-secondary">+01</div>
             </button>
           </Link>

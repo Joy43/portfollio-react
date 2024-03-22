@@ -4,8 +4,7 @@ import ContactInfoCard from "./ContactInfoCard";
 const ContactInfo = () => {
   const [contactinfo] = Usecontact();
   return (
-    <div>
-      <h1>wlcome to contact info</h1>
+    <div className="grid md:grid-cols-3 gap-5">
       {contactinfo.map((contact) => {
         <ContactInfoCard
           key={contact._id}
