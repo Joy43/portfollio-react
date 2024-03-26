@@ -25,12 +25,13 @@ const SkillNodejs = () => {
         value={percentage}
         styles={{
           path: {
-            stroke: `rgba(62, 152, 199, ${percentage / 100})`,
+            stroke: `rgba(62, 152, 199, ${percentage / 100})`, // Blue color (62, 152, 199)
             strokeLinecap: "butt",
             transition: "stroke-dashoffset 0.5s ease 0s",
             transform: "rotate(0.25turn)",
             transformOrigin: "center center",
           },
+
           trail: {
             stroke: "#d6d6d6",
             strokeLinecap: "butt",
