@@ -14,7 +14,7 @@ const SkillNodejs = () => {
       } else {
         setPercentage(0); // Reset the percentage to 0 after reaching 90%
       }
-    }, 80); // Adjust the interval timing as needed for smoother animation
+    }, 110); // Adjust the interval timing as needed for smoother animation
 
     return () => clearInterval(interval); // Cleanup function
   }, [percentage]);
@@ -25,7 +25,7 @@ const SkillNodejs = () => {
         value={percentage}
         styles={{
           path: {
-            stroke: `rgba(62, 152, 199, ${percentage / 100})`, // Blue color (62, 152, 199)
+            stroke: `rgba(0, 0, 128, ${percentage / 100})`, // Navy Blue color (0, 0, 128)
             strokeLinecap: "butt",
             transition: "stroke-dashoffset 0.5s ease 0s",
             transform: "rotate(0.25turn)",
@@ -33,7 +33,7 @@ const SkillNodejs = () => {
           },
 
           trail: {
-            stroke: "#d6d6d6",
+            stroke: "#9f92fc",
             strokeLinecap: "butt",
             transform: "rotate(0.25turn)",
             transformOrigin: "center center",

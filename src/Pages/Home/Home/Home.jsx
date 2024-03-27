@@ -1,5 +1,7 @@
 import Contact from "../../Contact/Contact";
 import Feedback from "../../Feedback/Feedback";
+import ModalFeedback from "../../Feedback/ModalFeedback";
+
 import Allskill from "../../SkillsProgress/Allskill";
 import SkillProgress from "../../SkillsProgress/SkillProgress";
 import Aboutus from "../Aboutus/AboutUs";
@@ -27,6 +29,9 @@ const Home = () => {
       </div>
       <div>
         <Feedback></Feedback>
+      </div>
+      <div className="bg-red-500">
+        <ModalFeedback></ModalFeedback>
       </div>
     </div>
   );

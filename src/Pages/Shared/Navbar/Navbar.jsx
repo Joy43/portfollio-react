@@ -6,6 +6,7 @@ import { Button } from "keep-react";
 import { useState } from "react";
 import { MdDarkMode } from "react-icons/md";
 import { BsSunFill } from "react-icons/bs";
+
 const Navbar = () => {
   // -----------------     dark mode    ---------------
 
@@ -79,7 +80,7 @@ const Navbar = () => {
             {" "}
             <button className="btn">
               Contact-Info
-              <div className="badge badge-secondary">+01</div>
+              <div className="badge badge-secondary">+14</div>
             </button>
           </Link>
 
