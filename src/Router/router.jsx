@@ -9,6 +9,7 @@ import DashBoadSidebar from "../Pages/Dashboad/Dashboad/DashBoadSidebar";
 
 import UserInfo from "../Pages/Dashboad/UserInfo/UserInfo";
 import ContactInfo from "../Pages/Dashboad/Contactinfo/ContactInfo";
+import AddSite from "../Pages/Home/Portfolliosite/AddSite/AddSite";
 
 export const router = createBrowserRouter([
   {
@@ -44,6 +45,10 @@ export const router = createBrowserRouter([
       {
         path: "userInfo",
         element: <UserInfo></UserInfo>,
+      },
+      {
+        path: "addsite",
+        element: <AddSite></AddSite>,
       },
     ],
   },

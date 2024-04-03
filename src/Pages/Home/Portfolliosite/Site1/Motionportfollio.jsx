@@ -292,7 +292,7 @@ const Motionportfolli = () => {
             </AnimatePresence>
           )}
         </motion.div>
-        {/* -----------card -4--- */}
+        {/* -----------card-4  scanner premium--- */}
         <motion.div
           layout
           transition={{ layout: { duration: 1, type: "spring" } }}
@@ -375,6 +375,88 @@ const Motionportfolli = () => {
             </AnimatePresence>
           )}
         </motion.div>
+        {/* ---------------donation now------------ */}
+
+        <motion.div
+          layout
+          transition={{ layout: { duration: 1, type: "spring" } }}
+          onClick={() => setIsOpen(!isOpen)}
+          className=" mx-auto my-6 max-w-[350px] rounded-lg border font-sans shadow-2xl"
+        >
+          {/* HEDING ICON DIV */}
+          <motion.div
+            layout="position"
+            className="rounded-lg border w-full inline-flex font-sans  p-4 text-center shadow-2xl "
+          >
+            <img src={scanner} className=" rounded-lg h-20" alt="" />
+            <span className="text-4xl text-red-400"> Blood Donation</span>
+          </motion.div>
+          {isOpen && (
+            <AnimatePresence>
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 1 }}
+              >
+                {/* Post img */}
+                <div className="flex flex-col shadow-md gap-1">
+                  <div className="w-full">
+                    <img
+                      width={400}
+                      height={200}
+                      className="h-[150px] w-full bg-black/40"
+                      src={scannerCover}
+                      alt="tech cover"
+                    />
+                  </div>
+                  <div className="flex gap-1 shadow-lg overflow-hidden">
+                    <img
+                      width={201}
+                      height={201}
+                      className="h-[150px] w-[49.5%] bg-black/40"
+                      src={scannerleft}
+                      alt=""
+                    />
+                    <img
+                      width={202}
+                      height={202}
+                      className="h-[150px] w-[49.5%]  bg-black/40"
+                      src={scannerright}
+                      alt=""
+                    />
+                  </div>
+                </div>
+                {/* Post content */}
+                <div className="p mt-3 space-y-2 px-4">
+                  <h2 className=" text-xl font-semibold"> Blood Donation</h2>
+                  <h2 className=" text-sm">
+                    Scanner Premium Plus Android app in Amazon app storea few
+                    particular individuals can log in as admins.
+                  </h2>
+                </div>
+                {/* -------visit button -----------*/}
+                <div className="text-center m-6">
+                  <a href="https://chic-babka-6805ba.netlify.app/">
+                    <button className="btn btn-active btn-secondary">
+                      <a href="https://example.com">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="30"
+                          height="30"
+                          viewBox="0 0 24 24"
+                        >
+                          <path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm3.203 17.198a5.973 5.973 0 0 1-8.4-.015l-.001-.001a5.965 5.965 0 0 1-.131-8.589l4.968 4.969a1.5 1.5 0 0 0 2.121 2.121l4.969-4.969a5.96 5.96 0 0 1-.014 8.401l-.002.002a5.963 5.963 0 0 1-4.51 2.01zM12 5.25c-2.488 0-4.5 2.012-4.5 4.5s2.012 4.5 4.5 4.5 4.5-2.012 4.5-4.5-2.012-4.5-4.5-4.5z" />
+                        </svg>
+                      </a>
+                      Visit Now
+                    </button>
+                  </a>
+                </div>
+              </motion.div>
+            </AnimatePresence>
+          )}
+        </motion.div>
+        {/* --------------- */}
       </div>
     </div>
   );
