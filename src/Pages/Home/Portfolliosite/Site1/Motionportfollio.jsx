@@ -22,6 +22,11 @@ import hotelLeft from "../../../../assets/portfollio/texchworld/hotel-right.png"
 import scannerCover from "../../../../assets/portfollio/scanner/work-1.png";
 import scannerleft from "../../../../assets/portfollio/scanner/work-2.png";
 import scannerright from "../../../../assets/portfollio/scanner/work-3.png";
+// ------------donate now_----------
+import donateicon from "../../../../assets/icon/Donation.png";
+import coverdonation from "../../../../assets/portfollio/donation/cover.png";
+import leftdonation from "../../../../assets/portfollio/donation/left.png";
+import rightdonation from "../../../../assets/portfollio/donation/right.png";
 const Motionportfolli = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
@@ -50,7 +55,10 @@ const Motionportfolli = () => {
             className="rounded-lg border w-full inline-flex font-sans  p-4 text-center shadow-2xl "
           >
             <img src={tech} className=" rounded-lg h-20" alt="" />
-            <span className="text-4xl text-red-400"> World Teachnoloy</span>
+            <span className="text-3xl font-extrabold  text-[#FF444A]">
+              {" "}
+              World Teachnoloy
+            </span>
           </motion.div>
           {isOpen && (
             <AnimatePresence>
@@ -134,7 +142,9 @@ const Motionportfolli = () => {
             className="rounded-lg border w-full inline-flex font-sans  p-6 shadow-2xl "
           >
             <img src={hotel} className=" shadow-md h-20" alt="" />
-            <span className="text-2xl text-red-400">Hotel Management</span>
+            <span className="text-3xl font-extrabold  text-[#FF444A]">
+              World Hotel
+            </span>
           </motion.div>
           {isOpen && (
             <AnimatePresence>
@@ -218,9 +228,9 @@ const Motionportfolli = () => {
             className="rounded-lg border w-full inline-flex font-sans  p-4 text-center shadow-2xl "
           >
             <img src={convert} className=" rounded-lg h-20" alt="" />
-            <span className="text-4xl text-red-400">
+            <span className="text-4xl font-extrabold  text-[#FF444A]">
               {" "}
-              Our Conveter Team Projects
+              Our Conveter
             </span>
           </motion.div>
           {isOpen && (
@@ -305,7 +315,10 @@ const Motionportfolli = () => {
             className="rounded-lg border w-full inline-flex font-sans  p-4 text-center shadow-2xl "
           >
             <img src={scanner} className=" rounded-lg h-20" alt="" />
-            <span className="text-4xl text-red-400"> Scanner premium app</span>
+            <span className="text-3xl font-extrabold  text-[#FF444A]">
+              {" "}
+              Scanner premium app
+            </span>
           </motion.div>
           {isOpen && (
             <AnimatePresence>
@@ -388,8 +401,8 @@ const Motionportfolli = () => {
             layout="position"
             className="rounded-lg border w-full inline-flex font-sans  p-4 text-center shadow-2xl "
           >
-            <img src={scanner} className=" rounded-lg h-20" alt="" />
-            <span className="text-4xl text-red-400"> Blood Donation</span>
+            <img src={donateicon} className=" rounded-lg h-20" alt="" />
+            <span className="text-4xl text-[#FF444A]"></span>
           </motion.div>
           {isOpen && (
             <AnimatePresence>
@@ -405,7 +418,7 @@ const Motionportfolli = () => {
                       width={400}
                       height={200}
                       className="h-[150px] w-full bg-black/40"
-                      src={scannerCover}
+                      src={coverdonation}
                       alt="tech cover"
                     />
                   </div>
@@ -414,14 +427,14 @@ const Motionportfolli = () => {
                       width={201}
                       height={201}
                       className="h-[150px] w-[49.5%] bg-black/40"
-                      src={scannerleft}
+                      src={leftdonation}
                       alt=""
                     />
                     <img
                       width={202}
                       height={202}
                       className="h-[150px] w-[49.5%]  bg-black/40"
-                      src={scannerright}
+                      src={rightdonation}
                       alt=""
                     />
                   </div>

@@ -15,10 +15,10 @@ const AddSite = () => {
 
     visitURL: "",
     textarea: "",
-    siteIcon: null,
-    coverImage: null,
-    leftSiteImage: null,
-    rightSiteImage: null,
+    siteIcon: "",
+    coverImage: "",
+    leftSiteImage: "",
+    rightSiteImage: "",
   });
 
   const handleInputChange = (e) => {

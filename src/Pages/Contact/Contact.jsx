@@ -112,7 +112,7 @@ const Contact = () => {
             <h2 className="text-lg font-extrabold">Socials</h2>
             <ul className="flex mt-3 space-x-4">
               <li className="bg-[#1e0f13cf] h-10 w-10 rounded-full flex items-center justify-center shrink-0">
-                <a href="javascript:void(0)">
+                <a href="">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="20px"
@@ -127,8 +127,9 @@ const Contact = () => {
                   </svg>
                 </a>
               </li>
+              {/* linkind */}
               <li className="bg-[#1e0f13cf] h-10 w-10 rounded-full flex items-center justify-center shrink-0">
-                <a href="javascript:void(0)">
+                <a href="https://www.linkedin.com/in/shahsultan-islam-joy/">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="20px"
@@ -143,8 +144,9 @@ const Contact = () => {
                   </svg>
                 </a>
               </li>
+              {/* -------linkind-------- */}
               <li className="bg-[#1e0f13cf] h-10 w-10 rounded-full flex items-center justify-center shrink-0">
-                <a href="javascript:void(0)">
+                <a href="https://www.instagram.com/ssjoy370">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="20px"

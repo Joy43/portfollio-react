@@ -35,7 +35,17 @@ const Navbar = () => {
       <li>
         <Link to="/contact">Contact Us</Link>
       </li>
-      <li></li>
+      {/* -------dashboad----------- */}
+      <li>
+        {" "}
+        <Link to="/ContactInfo">
+          {" "}
+          <button className="btn">
+            Contact-Info
+            <div className="badge badge-secondary">+14</div>
+          </button>
+        </Link>
+      </li>
     </>
   );
   return (
@@ -67,23 +77,17 @@ const Navbar = () => {
             </ul>
           </div>
           {/* --------icon ------ */}
-          <a className="rounded-2xl">
-            <img className="w-15 h-12" src={logo} alt="logo" />
-          </a>
+
+          <Link to="/">
+            <a className="rounded-2xl">
+              <img className="w-15 h-12" src={logo} alt="logo" />
+            </a>
+          </Link>
         </div>
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1 ">{Navlinks}</ul>
         </div>
         <div className="navbar-end gap-4">
-          {/* -------dashboad----------- */}
-          <Link to="/ContactInfo">
-            {" "}
-            <button className="btn">
-              Contact-Info
-              <div className="badge badge-secondary">+14</div>
-            </button>
-          </Link>
-
           {/* -------theme --------------*/}
           <div>
             <button
