@@ -11,7 +11,7 @@ import {
 } from "firebase/auth";
 
 import PropTypes from "prop-types";
-import app from "../Firebase/Firebase.config";
+import app from "./firebase.config";
 
 export const AuthContext = createContext(null);
 const auth = getAuth(app);
