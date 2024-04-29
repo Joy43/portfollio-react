@@ -51,8 +51,8 @@ const Contact = () => {
         });
         Toast.fire({
           icon: "success",
-          title: "summited in successfully",
-          footer: " plese check your mail .Deatils here",
+          title: "summited in successfully your message",
+          footer: " plese check your mail .Deatils here your email",
         });
       } else {
         // Handle error
